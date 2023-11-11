@@ -1,0 +1,29 @@
+{% extends "taslak.html" %}
+{% block baslik %}  {% endblock %}
+{% block icerik %}
+    <div class="main">
+        <form action="{{ url_for('kayit') }}" method="post" >   <!-- python kodu yazmamıza işe yarıyor    post gizli yollar -->
+            <label>KAYDOL</label>
+            <input type="text" name ="isim" placeholder="kullanıcı adınızı giriniz..." required >
+            <input type="email" name = "email" placeholder="emailinizi giriniz" required >
+            <input type="password" name="sifre" placeholder="şifrenizi giriniz" required>
+            <button>KAYIT OL</button>
+            {% if hata  %}
+                <label>
+                    {{ hata }}       <!-- python kodu kulanmak için 2 tane süslü parantez kullancağız   -->
+                </label>
+            {% endif %}
+        </form>
+
+    </div>
+
+{% endblock %}
+ 
+ 
+<!--
+
+     <div id="main"></div>      id si main olması için div#main yazarız      
+    
+    <div class="main"></div>           class ı  main yapmak için div.main yazmamız gererkli
+
+-->

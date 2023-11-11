@@ -1,0 +1,28 @@
+
+{% extends "taslak.html" %}
+{% block baslik %} ürün Güncelle {% endblock %}
+
+{% block icerik %}
+    
+
+
+<div class="main">
+    <form action="{{ url_for('urun_kaydet') }}" method="post" >   <!-- python kodu yazmamıza işe yarıyor    post gizli yollar -->
+        <label>ÜRÜN</label>
+
+        <input type="text" name ="id"    value="{{ urun[0] }}" readonly >
+        <input type="text" name ="kod"   value="{{ urun[1] }}" placeholder=" ürün kodunu giriniz" required >
+        <input type="text" name = "ad"   value="{{ urun[2] }}" placeholder=" ürünün ismini giriniz" required >
+        <input type="text" name="fiyat"  value="{{ urun[3] }}" placeholder=" ürün fiyatini giriniz" required>
+
+        <button>Güncelle</button>
+        {% if hata  %}
+            <label>
+                {{ hata }}       <!-- python kodu kulanmak için 2 tane süslü parantez kullancağız   -->
+            </label>
+        {% endif %}
+    </form>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "taslak.html" %}
+{% block baslik %} giriş yap {% endblock %}
+{% block icerik %}
+
+    <div class="main">
+        <form action="{{ url_for('login_kontrol') }}" method="post" >   <!-- python kodu yazmamıza işe yarıyor    post gizli yollar -->
+            <label>GİRİŞ</label>
+            <input type="text" name ="isim" placeholder="kullanici adinizi giriniz..." required >
+            <input type="password" name="sifre" placeholder="şifrenizi giriniz" required>
+            <button>GİRİŞ</button>
+            <a href="/kaydol">KAYDOL</a>
+            {% if hata  %}
+                <label>
+                    {{ hata }}       <!-- python kodu kulanmak için 2 tane süslü parantez kullancağız   -->
+                </label>
+            {% endif %}
+        </form>
+
+    </div>
+{% endblock %}

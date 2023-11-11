@@ -1,0 +1,19 @@
+{% extends "taslak.html" %}
+{% block baslik %} ÜRÜN EKLE {% endblock %}
+{% block icerik %}
+<div class="main">
+    <form action="{{ url_for('urun_ekle') }}" method="POST" >   <!-- python kodu yazmamıza işe yarıyor    post gizli yollar -->
+        <label>URUN EKLE</label>
+        <input type="text" name ="ad" placeholder="yaziniz" required >
+        <input type="text" name="fiyat" placeholder="fiyat giriniz" required>
+        <button>EKLE</button>
+       
+        {% if hata  %}
+            <label>
+                {{ hata }}       <!-- python kodu kulanmak için 2 tane süslü parantez kullancağız   -->
+            </label>
+        {% endif %}
+    </form>
+
+</div>
+{% endblock %}

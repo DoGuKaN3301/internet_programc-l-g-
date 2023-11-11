@@ -1,0 +1,102 @@
+/* bütün herşein aynı olması için sadece p yada h1 */
+body{
+    background : linear-gradient(rgb(141, 132, 10), rgb(11, 82, 27));
+    min-height: 880px;      /* minimum yüksekliği 600 */
+    justify-content: center;
+    display: flex;                  /* görüntüyü esnek hale getirir*/
+
+}
+label{
+    color: bisque;
+    font-size: 45px;
+    justify-content: center;
+    display:flex;
+
+
+
+}
+p{
+
+    color: aqua; /*K Y M (R G B ) 0,0,255    aqua yerine rgb(0,0,255) şekilde yazabiliyoruz , mavi rengin kodu , #*/
+    /* hexadecimal sayılar = 0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F ŞEKİLDE YAZILIR */
+    background-color: rgb(218, 5, 5);
+    height: 20px; 
+
+}
+a{
+
+    color: rgb(21, 165, 209);
+    background-color: rgb(184, 235, 1);
+    border: 7.5px solid rgb(198, 2, 247);      /*  ilk kalınlık sonra şekil sonra renk */
+    border-radius: 15px;                          /*  border-radius: 15px; köşeleri yuvarlak yapar  */
+    text-decoration: none;
+    box-shadow: black;
+    height: 20px;
+    margin: 15px;
+    text-decoration: none;
+    color: aliceblue;
+    justify-content: center;
+    display:flex;
+}
+/* class ta . koyuyoruz */
+.main{
+    margin-top: 100px;
+    width: 200px;
+    height: 300px ;
+    box-shadow: 10px  10px 130px;
+    border-radius: 10px;
+    
+} 
+input{
+
+    width: 150px;
+    height: 20px;
+    padding: 10px ;
+    justify-content: center;
+    display: flex;
+    margin: 5px;  /* her iki kutunun arasındaki boşluk */
+    margin-left: 12px;
+    
+}
+button{
+
+    width: 100px;
+    height: 30px;
+    background-color: blue;
+    color: aliceblue;
+    margin: 25px;
+    
+
+}
+
+label{
+    font-size: 18px;
+    margin: 15px;
+
+}
+
+.urunler{
+    margin-top: 18px;
+    background-color: rgb(40, 115, 180);
+    width: 250px;
+    height: 90px;
+    color: aliceblue;
+}
+.guncelle{
+    background-color: orange;
+    padding: 3px;
+
+}
+
+
+.sil{
+    background-color: red;
+    padding: 3px;
+
+}
+.ekle{
+    background: gray;
+
+
+
+}
